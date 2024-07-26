@@ -1,0 +1,236 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+header {
+    background-color: rgb(52, 52, 241);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+    padding: 0 200px;
+}
+
+header h1 {
+    flex-grow: 1;
+    text-align: center;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block;
+}
+
+h3{
+    color: rgb(52, 52, 241);
+    margin-bottom: 25px;
+}
+
+.container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.container h3{
+    border-bottom: 1px solid #000;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.sobre {
+    display: flex;
+    align-items: flex-start;
+}
+
+.sobre img {
+    width: 300px;
+    height: auto;
+    margin-right: 20px;
+    margin-bottom: 100px;
+}
+
+.sobre p {
+    line-height: 1.6;
+    margin-bottom: 10px;
+    max-width: 600px;
+}
+
+section ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    justify-content: space-between;
+}
+
+section ul li {
+    flex: 1 1 calc(25% - 10px);
+    margin: 10px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    background-color: #fff;
+    border-radius: 8px;
+}
+
+section ul li img {
+    max-width: 100px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+section ul li h2 {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+section ul li p {
+    font-size: 14px;
+    margin: 10px 0;
+}
+
+section ul li button {
+    background-color: rgb(52, 52, 241);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+section ul li button:hover {
+    background-color: rgb(75, 75, 250);
+}
+
+/* Media Query para Layout Mobile (até 640px) */
+@media screen and (max-width: 640px) {
+    header {
+        flex-direction: column;
+        justify-content: center;
+        height: auto;
+        padding: 10px;
+    }
+
+    header h1 {
+        margin-bottom: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    .container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .sobre {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sobre img {
+        margin-right: 0;
+        margin-bottom: 15px;
+        width: 100%;
+        max-width: 300px;
+    }
+
+    section ul {
+        display: block;
+        padding: 0;
+        overflow-y: auto;
+    }
+
+    section ul li {
+        flex: 1 1 100%;
+        margin: 10px 0;
+    }
+
+    section ul li img {
+        max-width: 150px;
+    }
+}
+
+@media screen and (max-width: 1023px) and (min-width: 641px) {
+    header {
+        padding: 0 100px;
+    }
+
+    .sobre {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .sobre img {
+        width: 100%;
+        max-width: 500px;
+        margin-bottom: 20px;
+    }
+
+    section ul {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0;
+        margin: 0;
+        justify-content: space-between;
+    }
+
+    section ul li {
+        flex: 1 1 calc(33.333% - 20px);
+        margin: 10px;
+        border: 1px solid #ccc;
+        padding: 10px;
+        box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        background-color: #fff;
+        border-radius: 8px;
+    }
+
+    section ul li img {
+        max-width: 100px;
+    }
+
+    section ul li h2 {
+        font-size: 18px;
+    }
+
+    section ul li p {
+        font-size: 16px;
+    }
+}
